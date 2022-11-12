@@ -67,7 +67,7 @@ void colocarAntena (MATRIZ *superficie){
                j_aux = j;
             }
             else {
-                if (j-j_aux ==5){
+                if (j-j_aux =5){
                     asignar_valor(superficie, i_aux, j, 1);
                 }
             }
