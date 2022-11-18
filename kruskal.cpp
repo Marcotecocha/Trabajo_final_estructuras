@@ -95,17 +95,27 @@ int main(int argc, char *argv[])
 {
 Grafo g(7); // grafo
 // adiciona las aristas
-g.adicionarArista(0, 1, 7);
-g.adicionarArista(0, 3, 5);
-g.adicionarArista(1, 2, 8);
-g.adicionarArista(1, 3, 9);
-g.adicionarArista(1, 4, 7);
-g.adicionarArista(2, 4, 5);
-g.adicionarArista(3, 4, 15);
-g.adicionarArista(3, 5, 6);
-g.adicionarArista(4, 5, 8);
-g.adicionarArista(4, 6, 9);
-g.adicionarArista(5, 6, 11);
+  g.adicionarArista(0, 1, 2);
+  g.adicionarArista(0, 5, 3);
+  g.adicionarArista(0, 6, 6);
+
+  g.adicionarArista(1, 2, 3);
+  g.adicionarArista(1, 6, 7);
+  g.adicionarArista(1, 7, 8);
+  g.adicionarArista(1, 8, 4);
+
+  g.adicionarArista(2, 3, 4);
+  g.adicionarArista(2, 8, 3);
+  g.adicionarArista(2, 9, 7);
+
+  g.adicionarArista(3, 4, 5);
+  g.adicionarArista(3, 9, 9);
+  g.adicionarArista(3, 10, 5);
+ 
+  g.adicionarArista(2, 6, 11);
+  g.adicionarArista(2, 6, 11);
+  
+  
 g.kruskal(); //  algoritmo de Kruskal
 return 0;
 }
