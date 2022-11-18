@@ -93,7 +93,7 @@ cout << "(" << v1 << ", " << v2 << ") = " << arvore[i].obtenerPeso() << endl;
 
 int main(int argc, char *argv[])
 {
-Grafo g(7); // grafo
+Grafo g(20); // grafo
 // adiciona las aristas
   g.adicionarArista(0, 1, 2);
   g.adicionarArista(0, 5, 3);
@@ -112,8 +112,21 @@ Grafo g(7); // grafo
   g.adicionarArista(3, 9, 9);
   g.adicionarArista(3, 10, 5);
  
-  g.adicionarArista(2, 6, 11);
-  g.adicionarArista(2, 6, 11);
+  g.adicionarArista(4, 10, 6);
+  g.adicionarArista(4, 11, 7);
+  
+  g.adicionarArista(5, 6, 8);
+  g.adicionarArista(5, 12, 4);
+  g.adicionarArista(5, 13, 9);
+  
+  g.adicionarArista(6, 7, 4);
+  g.adicionarArista(6, 13, 6);
+  g.adicionarArista(6, 14, 5);
+  
+  g.adicionarArista(7, 8, 5);
+  g.adicionarArista(7, 14, 6);
+  g.adicionarArista(7, 15, 3);
+  
   
   
 g.kruskal(); //  algoritmo de Kruskal
