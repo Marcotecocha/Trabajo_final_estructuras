@@ -93,7 +93,7 @@ cout << "(" << v1 << ", " << v2 << ") = " << arvore[i].obtenerPeso() << endl;
 
 int main(int argc, char *argv[])
 {
-Grafo g(44); // grafo
+Grafo g(20); // grafo
 // adiciona las aristas
   g.adicionarArista(0, 1, 2);
   g.adicionarArista(0, 5, 3);
