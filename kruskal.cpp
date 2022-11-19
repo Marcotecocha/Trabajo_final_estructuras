@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include <algorithm> // sort
-#include <string.h> // memset
+#include <algorithm> 
+#include <string.h>
 using namespace std;
 class Arista
 {
@@ -21,7 +21,7 @@ return vertice2;
 int obtenerPeso() {
 return peso;
 }
-// sobrescribir operador "<"
+
 bool operator < (const Arista& arista2) const
 {
 return (peso < arista2.peso);
@@ -30,27 +30,27 @@ return (peso < arista2.peso);
 
 class Grafo
 {
-int V; // número de vértices
-vector<Arista> aristas; // vector de aristas
+int V; 
+vector<Arista> aristas; 
 public:
 Grafo(int V)
 {
 this->V = V;
 }
-// funcion que adiciona una arista
+
 void adicionarArista(int v1, int v2, int peso)
 {
 Arista arista(v1, v2, peso);
 aristas.push_back(arista);
 }
-// funcion que busca o subconjunto de um elemento "i"
+
 int buscar(int subset[], int i)
 {
 if(subset[i] == -1)
 return i;
 return buscar(subset, subset[i]);
 }
-// funcion para unir dos subconjuntos en un único subconjunto
+
 void unir(int subset[], int v1, int v2)
 {
 int v1_set = buscar(subset, v1);
@@ -63,11 +63,11 @@ void kruskal()
 {
 vector<Arista> arvore;
 int size_aristas = aristas.size();
-// ordena as aristas pelo menor peso
+
 sort(aristas.begin(), aristas.end());
-// separa memória para crear "V" subconjuntos
+
 int * subset = new int[V];
-// inicializa todos los subconjuntos como conjuntos de un único elemento
+
 memset(subset, -1, sizeof(int) * V);
 for(int i = 0; i < size_aristas; i++)
 {
@@ -75,13 +75,13 @@ int v1 = buscar(subset, aristas[i].obtenerVertice1());
 int v2 = buscar(subset, aristas[i].obtenerVertice2());
 if(v1 != v2)
 {
-// si son diferentes éd porque NO forma ciclo, inserta en vetor
+
 arvore.push_back(aristas[i]);
-unir(subset, v1, v2); // faz a union
+unir(subset, v1, v2); 
 }
 }
 int size_arbol = arvore.size();
-// muestra las aristas selecionadas con sus respectivos pesos
+
 for(int i = 0; i < size_arbol; i++)
 {
 char v1 = 'A' + arvore[i].obtenerVertice1();
@@ -93,7 +93,7 @@ cout << "(" << v1 << ", " << v2 << ") = " << arvore[i].obtenerPeso() << endl;
 
 int main(int argc, char *argv[])
 {
-Grafo g(20); // grafo
+Grafo g(20);
 // adiciona las aristas
   g.adicionarArista(0, 1, 2);
   g.adicionarArista(0, 5, 3);
